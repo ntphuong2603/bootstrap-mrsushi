@@ -1,7 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Header from './component/header/header'
-import { NAV_MENU } from './constant/navbarMenu'
 import MainLayout from './hoc/mainLayout'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Home from './component/home/home'

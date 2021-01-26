@@ -22,7 +22,7 @@ const Header = () => {
         ))
 
         return(
-            <Nav className='ml-auto'>
+            <Nav>
                 {menus}
             </Nav>
         )
@@ -39,7 +39,7 @@ const Header = () => {
         ))
 
         return (
-            <Dropdown className='ml-auto'>
+            <Dropdown>
                 <Dropdown.Toggle variant='primary'>
                     <FontAwesomeIcon icon={faBars} color='white'/>
                 </Dropdown.Toggle>
@@ -52,15 +52,16 @@ const Header = () => {
 
     const ShowMenus = () => {
         const { width } = useViewport();
-
         return width <= 700 ? dropdownMenus() : barMenus()
     }
 
     return(
-        <Navbar bg='primary' variant='dark'>    
+        <Navbar bg='primary' variant='dark' sticky='top'>    
             <Container>
                 <Navbar.Brand>Mr. Sushi</Navbar.Brand>
+                <div className='ml-auto'>
                 {ShowMenus()}
+                </div>
             </Container>
         </Navbar>
     )
